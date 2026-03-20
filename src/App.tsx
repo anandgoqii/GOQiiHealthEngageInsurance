@@ -4,6 +4,8 @@
  */
 
 import { useEffect, MouseEvent, useState, FormEvent } from 'react';
+import { renderToString } from 'react-dom/server';
+import { Building2, Briefcase, Watch, Pill, Smartphone, Microscope, Stethoscope, ClipboardList, Eye, Target, Puzzle } from 'lucide-react';
 
 export default function App() {
   const [showDemoModal, setShowDemoModal] = useState(false);
@@ -460,35 +462,51 @@ export default function App() {
           <!-- Outer nodes -->
           <!-- Top -->
           <circle cx="220" cy="42" r="28" fill="white" stroke="rgba(0,201,160,.3)" stroke-width="1.5"/>
-          <text x="220" y="38" text-anchor="middle" font-size="16">🏥</text>
+          <g transform="translate(210, 24)">
+            ${renderToString(<Building2 color="#0f2236" size={20} />)}
+          </g>
           <text x="220" y="54" text-anchor="middle" fill="#0f2236" font-family="Plus Jakarta Sans,sans-serif" font-size="7" font-weight="700">HOSPITALS</text>
           <!-- Top right -->
           <circle cx="368" cy="93" r="28" fill="white" stroke="rgba(0,201,160,.3)" stroke-width="1.5"/>
-          <text x="368" y="89" text-anchor="middle" font-size="16">🏢</text>
+          <g transform="translate(358, 75)">
+            ${renderToString(<Briefcase color="#0f2236" size={20} />)}
+          </g>
           <text x="368" y="105" text-anchor="middle" fill="#0f2236" font-family="Plus Jakarta Sans,sans-serif" font-size="7" font-weight="700">EMPLOYERS</text>
           <!-- Right -->
           <circle cx="398" cy="220" r="28" fill="white" stroke="rgba(0,201,160,.3)" stroke-width="1.5"/>
-          <text x="398" y="216" text-anchor="middle" font-size="16">⌚</text>
+          <g transform="translate(388, 202)">
+            ${renderToString(<Watch color="#0f2236" size={20} />)}
+          </g>
           <text x="398" y="232" text-anchor="middle" fill="#0f2236" font-family="Plus Jakarta Sans,sans-serif" font-size="7" font-weight="700">WEARABLES</text>
           <!-- Bottom right -->
           <circle cx="368" cy="347" r="28" fill="white" stroke="rgba(245,166,35,.35)" stroke-width="1.5"/>
-          <text x="368" y="343" text-anchor="middle" font-size="16">💊</text>
+          <g transform="translate(358, 329)">
+            ${renderToString(<Pill color="#0f2236" size={20} />)}
+          </g>
           <text x="368" y="359" text-anchor="middle" fill="#0f2236" font-family="Plus Jakarta Sans,sans-serif" font-size="7" font-weight="700">PHARMACY</text>
           <!-- Bottom -->
           <circle cx="220" cy="398" r="28" fill="white" stroke="rgba(0,201,160,.3)" stroke-width="1.5"/>
-          <text x="220" y="394" text-anchor="middle" font-size="16">📱</text>
+          <g transform="translate(210, 380)">
+            ${renderToString(<Smartphone color="#0f2236" size={20} />)}
+          </g>
           <text x="220" y="410" text-anchor="middle" fill="#0f2236" font-family="Plus Jakarta Sans,sans-serif" font-size="7" font-weight="700">MEMBER APP</text>
           <!-- Bottom left -->
           <circle cx="72" cy="347" r="28" fill="white" stroke="rgba(0,201,160,.3)" stroke-width="1.5"/>
-          <text x="72" y="343" text-anchor="middle" font-size="16">🔬</text>
+          <g transform="translate(62, 329)">
+            ${renderToString(<Microscope color="#0f2236" size={20} />)}
+          </g>
           <text x="72" y="359" text-anchor="middle" fill="#0f2236" font-family="Plus Jakarta Sans,sans-serif" font-size="7" font-weight="700">DIAGNOSTICS</text>
           <!-- Left -->
           <circle cx="42" cy="220" r="28" fill="white" stroke="rgba(0,201,160,.3)" stroke-width="1.5"/>
-          <text x="42" y="216" text-anchor="middle" font-size="16">👨‍⚕️</text>
+          <g transform="translate(32, 202)">
+            ${renderToString(<Stethoscope color="#0f2236" size={20} />)}
+          </g>
           <text x="42" y="232" text-anchor="middle" fill="#0f2236" font-family="Plus Jakarta Sans,sans-serif" font-size="7" font-weight="700">COACHES</text>
           <!-- Top left -->
           <circle cx="72" cy="93" r="28" fill="white" stroke="rgba(0,201,160,.3)" stroke-width="1.5"/>
-          <text x="72" y="89" text-anchor="middle" font-size="16">📋</text>
+          <g transform="translate(62, 75)">
+            ${renderToString(<ClipboardList color="#0f2236" size={20} />)}
+          </g>
           <text x="72" y="105" text-anchor="middle" fill="#0f2236" font-family="Plus Jakarta Sans,sans-serif" font-size="7" font-weight="700">POLICY SYS</text>
           <!-- Defs -->
           <defs>
@@ -509,21 +527,21 @@ export default function App() {
         <p class="section-sub">GOQii healthEngage is the intelligent hub between every partner in your care ecosystem — giving you a real-time picture of member health risk and the tools to act on it.</p>
         <div class="platform-checks">
           <div class="pcheck">
-            <div class="pcheck-icon">👁️</div>
+            <div class="pcheck-icon">${renderToString(<Eye color="#00c9a0" size={24} />)}</div>
             <div>
               <div class="pcheck-title">One View of Every Member</div>
               <div class="pcheck-text">Health data, risk scores, care pathways and engagement — unified in a single dashboard.</div>
             </div>
           </div>
           <div class="pcheck">
-            <div class="pcheck-icon">🎯</div>
+            <div class="pcheck-icon">${renderToString(<Target color="#00c9a0" size={24} />)}</div>
             <div>
               <div class="pcheck-title">Act Before Claims Happen</div>
               <div class="pcheck-text">Predictive risk signals identify high-risk members weeks before an expensive claim materialises.</div>
             </div>
           </div>
           <div class="pcheck">
-            <div class="pcheck-icon">🧩</div>
+            <div class="pcheck-icon">${renderToString(<Puzzle color="#00c9a0" size={24} />)}</div>
             <div>
               <div class="pcheck-title">Modular — Start Where It Matters</div>
               <div class="pcheck-text">Deploy the solution that addresses your most pressing need first. Expand at your own pace.</div>
