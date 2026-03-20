@@ -212,6 +212,7 @@ h1 em::after{
   box-shadow:0 16px 48px rgba(7,25,46,.25);
   font-size:.82rem;font-weight:600;min-width:185px;
   animation:float-badge 4s ease-in-out infinite;
+  z-index:3;
 }
 .hero-badge strong{display:block;font-family:'Fraunces',serif;font-size:1.5rem;color:var(--teal2);line-height:1.2}
 .hero-badge2{
@@ -222,6 +223,7 @@ h1 em::after{
   font-size:.78rem;font-weight:700;
   animation:float-badge 4s ease-in-out infinite;
   animation-delay:-2s;
+  z-index:3;
 }
 @keyframes float-badge{
   0%,100%{transform:translateY(0px)}
