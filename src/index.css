@@ -51,7 +51,7 @@ nav.scrolled{
 }
 
 @keyframes pulse-dot{0%,100%{box-shadow:0 0 0 0 rgba(0,201,160,.4)}50%{box-shadow:0 0 0 6px rgba(0,201,160,0)}}
-nav ul{list-style:none;display:flex;gap:2rem;align-items:center}
+nav ul{list-style:none;display:flex;gap:2rem;align-items:center;margin:0;padding:0}
 nav ul a{text-decoration:none;color:var(--muted);font-size:.85rem;font-weight:600;transition:color .2s;position:relative}
 nav ul a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:2px;background:var(--teal);transition:width .3s var(--ease2)}
 nav ul a:hover{color:var(--navy)}
@@ -62,6 +62,7 @@ nav ul a:hover::after{width:100%}
   font-weight:700!important;font-size:.82rem!important;
   transition:all .3s var(--ease2)!important;
   box-shadow:0 4px 14px rgba(7,25,46,.2);
+  white-space:nowrap;
 }
 .nav-cta:hover{background:var(--teal)!important;transform:translateY(-2px)!important;box-shadow:0 8px 24px rgba(0,201,160,.35)!important}
 .nav-cta::after{display:none!important}
@@ -990,6 +991,15 @@ footer{
 }
 
 @media (max-width: 480px) {
+  .logo-img {
+    height: 28px;
+  }
+  
+  .nav-cta {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.75rem !important;
+  }
+
   .hero-actions,
   .cta-actions {
     flex-direction: column;
